@@ -30,17 +30,27 @@ public class BMICalcTest {
 	@Test
 	public void underweight() {
 		BMICalcImpl a=new BMICalcImpl();
-		assertEquals(a.category(18.5),"UNDERWEIGHT");
+		assertEquals(a.category(18.4),"UNDERWEIGHT");
 	}
 	@Test
 	public void Normal1() {
 		BMICalcImpl a=new BMICalcImpl();
-		assertEquals(a.category(18.6),"NORMAL");
+		assertEquals(a.category(18.5),"NORMAL");
 	}
 	@Test
 	public void Normal2() {
 		BMICalcImpl a=new BMICalcImpl();
-		assertEquals(a.category(29.9),"NORMAL");
+		assertEquals(a.category(24.9),"NORMAL");
+	}
+	@Test
+	public void OverWeight1() {
+		BMICalcImpl a=new BMICalcImpl();
+		assertEquals(a.category(25),"OVERWEIGHT");
+	}
+	@Test
+	public void OverWeight2() {
+		BMICalcImpl a=new BMICalcImpl();
+		assertEquals(a.category(29.9),"OVERWEIGHT");
 	}
 	@Test
 	public void Obese() {
