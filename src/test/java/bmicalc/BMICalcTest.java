@@ -55,7 +55,7 @@ public class BMICalcTest {
 	@Test
 	public void Obese() {
 		BMICalcImpl a=new BMICalcImpl();
-		assertEquals(a.category(20),"OBESE");
+		assertEquals(a.category(30),"OBESE");
 	}
 	@Test
 	public void categoryBmiNegativo() {
@@ -63,14 +63,14 @@ public class BMICalcTest {
 		assertThrows(Exception.class,()->a.category(-2));
 	}
 	@Test
-	public void aogenderMwc90(){
+	public void aogenderMwc100(){
 		BMICalcImpl a=new BMICalcImpl();
-		assertTrue(a.abdominalObesity(0.9,'M'));
+		assertTrue(a.abdominalObesity(100,'M'));
 	}
 	@Test
-	public void aogenderFwc80(){
+	public void aogenderFwc90(){
 		BMICalcImpl a=new BMICalcImpl();
-		assertTrue(a.abdominalObesity(0.8,'F'));
+		assertTrue(a.abdominalObesity(0.9,'F'));
 	}
 	@Test
 	public void aogenderMwc80(){

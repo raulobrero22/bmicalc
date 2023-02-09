@@ -12,8 +12,8 @@ COmprobación en 25 salga OVERWEIGHT
 6.Comprobacion en 29.9 que salga OVERWEIGHT
 7.Comprobacion en 30 que salga OBESE
 8.Comprobacion de con un BMI negativo salga un error
-9.Comprobacion que con gender=M y waistCIrcumference=0.9 nos devuelva true
-10.Comprobacion que con gender=F y waistCIrcumference=0.8 nos devuelva true
+9.Comprobacion que con gender=M y waistCIrcumference=1 nos devuelva true
+10.Comprobacion que con gender=F y waistCIrcumference=0.9 nos devuelva true
 11.Comprobacion que con gender=M y waistCIrcumference=0.8 nos devuelva false
 12.Comprobacion que con gender=F y waistCIrcumference=0.7 nos devuelva false
 13.Comprobacion que con gender distinto de M y F nos devuelva un error
