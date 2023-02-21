@@ -19,3 +19,6 @@ COmprobación en 25 salga OVERWEIGHT
 13.Comprobacion que con gender distinto de M y F nos devuelva un error
 14.Comprobacion que con un waistCircumference negativo nos devuelva un error
 
+<image src="C:\Users\raul\Desktop\Diagrama1.png" alt="Diagrama UML del modelo">
+El caso de uso que hemos añadido es un cálculo según la altura de la persona y su género de su IBM ideal.
+
