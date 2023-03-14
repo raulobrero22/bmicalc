@@ -19,12 +19,12 @@ COmprobación en 25 salga OVERWEIGHT
 13.Comprobacion que con gender distinto de M y F nos devuelva un error
 14.Comprobacion que con un waistCircumference negativo nos devuelva un error
 
-#Diagrama UML
+# Diagrama UML
 
 <image src="C:\Users\raul\Desktop\Diagrama1.png" alt="Diagrama UML del modelo">
 El caso de uso que hemos añadido es un cálculo según la altura de la persona y su género de su IBM ideal.
 
-#Especificación de caso de uso
+# Especificación de caso de uso
 Calcular categoría
 -Actor primario: Médico
 -Objetivo: Calcular la categoría que es un paciente(obeso, delgado...) a través 
@@ -52,4 +52,73 @@ al paciente
 3a. El médico introduce parámetros no reales(muy altos o muy bajos)
 3b. El software devuelve un error y vuelve a preguntar los parámetros
 
+# Historias de usuario y escenarios
+Historia de Usuario 1:
+Como Médico
+Quiero saber el bmi de un paciente
+Para informarle sobre su bmi o calcular su categoria
 
+Criterio de aceptación 11:
+Escenario: Se calcula su bmi correctamente
+Dado que los valores son válidos cuando introduzo esto valores en la calculadora entonces me dará el valor del bmi
+
+Criterio de aceptación 12:
+Escenario: La masa introducida es negativa
+Dado que tengo una calculadora, cuando introduzco los valores en la calculadora and la masa es negativa, entonces me devolverá un error.
+
+Criterio de aceptación 13:
+Escenario: Se introduce un valor de height de 0
+Dado que que tengo una calculadora and el height es igual a 0, cuando introduzco los valores , entonces me devolverá una excepción.
+Historia de Usuario 2:
+Como Médico
+Quiero conocer a que categoría pertenece un paciente
+Para informarle sobre eso
+
+Criterio de aceptación 21:
+Escenario: El bmi es igual a 5
+Dado que el bmi es igual a 5 and elijo la opción calcular categoria, cuando introduzca el bmi, entonces me devolverá que la persona pertenece a la cetgoría a la underweight
+
+Criterio de aceptación 22:
+Escenario: El bmi es igual a 20
+Dado que el bmi es igual a 20 and elijo la opción calcular categoria, cuando introduzca el bmi, entonces me devolverá que la persona pertenece a la cetgoría a la normal
+
+Criterio de aceptación 23:
+Escenario: El bmi es igual a 27
+Dado que el bmi es igual a 27 and elijo la opción calcular categoria, cuando introduzca el bmi, entonces me devolverá que la persona pertenece a la cetgoría a la overweight
+
+Criterio de aceptación 24:
+Escenario: El bmi es igual a 30
+Dado que el bmi es igual a 30 and elijo la opción calcular categoria, cuando introduzca el bmi, entonces me devolverá que la persona pertenece a la catgoría a la obese
+
+Criterio de aceptación 25:
+Escenario: El bmi es negativo
+Dado que el bmi es negativo and elijo la opción calcular categoria, cuando introduzca el bmi, entonces me devolverá un error
+
+Historia de usuario 3:
+Como Médico
+Quiero saber si un paciente tiene obesidad abdominal
+Para informarle sobre ello
+
+Criterio de aceptación 31:
+Escenario: Persona de género másculino con wc igual a 1
+Dado que el paciente es un hombre and tiene un wc igual a 1 and elige la opción calcular obesidad abdominal, cuando introduzco estos dos valores, entonces me devolverá que tiene obesidad abdominal
+
+Criterio de aceptación 32:
+Escenario: Persona de género femenino con wc igual a 1
+Dado que el paciente es una mujer and tiene un wc igual a 1 and elige la opción calcular obesidad abdominal, cuando introduzco estos dos valores, entonces me devolverá que tiene obesidad abdominal
+
+Criterio de aceptación 33:
+Escenario: Persona de género másculino con wc igual a 0,8
+Dado que el paciente es un hombre and tiene un wc igual a 0,8 and elige la opción calcular obesidad abdominal, cuando introduzco estos dos valores, entonces me devolverá que no tiene obesidad abdominal
+
+Criterio de aceptación 34:
+Escenario: Persona de género femenino con wc igual a 0,7
+Dado que el paciente es una femenino and tiene un wc igual a 0,8 and elige la opción calcular obesidad abdominal, cuando introduzco estos dos valores, entonces me devolverá que no tiene obesidad abdominal
+
+Criterio de aceptación 35:
+Escenario: wc menor que 0
+Dado que se introduce un wc menor que 0 and elige la opción calcular obesidad abdominal, cuando introduzco este valor, entonces me devolverá que el wc no puede ser menor que 0
+
+Criterio de aceptación 36:
+Escenario: genero no reconocido
+Dado que see introduceen genero un valor distinto de M o F and elige la opción calcular obesidad abdominal, cuando introduzco este valor, entonces me devolverá que el genero no se ha reconocido
