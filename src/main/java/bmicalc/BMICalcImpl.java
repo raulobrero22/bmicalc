@@ -4,6 +4,7 @@ public class BMICalcImpl implements BMICalc {
 
 	double bmi;
 	String categoria;
+	
 
 	public double bmi(double mass, double height) {
 		if(height==0) {
