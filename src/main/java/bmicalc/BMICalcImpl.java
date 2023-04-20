@@ -5,7 +5,16 @@ public class BMICalcImpl implements BMICalc {
 	double bmi;
 	String categoria;
 	
-
+private static BMICalcImpl instancia;
+	
+	private BMICalcImpl() {
+	}
+	public static BMICalcImpl getInstance() {
+		if(instancia==null) {
+			instancia=new BMICalcImpl();
+		}
+		return instancia;
+	}
 	public double bmi(double mass, double height) {
 		if(height==0) {
 			throw new ArithmeticException("No se puede dividir entre 0");
