@@ -11,7 +11,7 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					BMICalcImpl modelo = new BMICalcImpl();
+					BMICalcImpl modelo = BMICalcImpl.getInstance();
 					vista Vista = new vista();
 					Vista.frame.setVisible(true);
 					controlador controlador = new controlador(modelo, Vista);
