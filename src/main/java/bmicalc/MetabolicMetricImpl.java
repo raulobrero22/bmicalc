@@ -3,19 +3,20 @@ package bmicalc;
 public class MetabolicMetricImpl implements MetabolicMetric{
 
 	@Override
-	public boolean abdominalObesity(double waistCircumference, char gender) {
+	public boolean abdominalObesity(double waistCircumference, Gender gender) {
 		if(waistCircumference<0) {
 			throw new RuntimeException("El waistCircumference no puede ser negativo");
 		}
-		if(gender!='M' && gender!='F') {
+		if(gender!=Gender.MALE && gender!=Gender.FEMALE) {
 			throw new RuntimeException("Género no reconocido");
 		}
 		boolean t=false;
-		if(gender=='M' && waistCircumference>0.9) {
+		if(gender==Gender.MALE && waistCircumference>0.9) {
 			t=true;
-		}else if(gender=='F' && waistCircumference>0.8) {
+		}else if(gender==Gender.FEMALE && waistCircumference>0.8) {
 			t=true;
 		}
+		
 		return t;
 	}
 

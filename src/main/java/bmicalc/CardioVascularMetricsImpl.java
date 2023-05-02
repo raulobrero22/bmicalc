@@ -25,19 +25,19 @@ private static CardioVascularMetricsImpl instancia;
 		return bmi;
 	}
 
-	public String category(double bmi) {
-		String categoria;
+	public ObesityCategory category(double bmi) {
+		ObesityCategory categoria;
 		if(bmi<0) {
 			throw new RuntimeException("El bmi no puede ser negativo");
 		}
 		if(bmi<18.5) {
-			categoria="UNDERWEIGHT";
+			categoria=ObesityCategory.OVERWEIGHT;
 		}else if (18.5<=bmi && bmi<=24.9){
-			categoria="NORMAL";
+			categoria=ObesityCategory.NORMAL;
 		}else if(25.0<=bmi && bmi<=29.9) {
-			categoria="OVERWEIGHT";
+			categoria=ObesityCategory.OVERWEIGHT;
 		}else {
-			categoria="OBESE";
+			categoria=ObesityCategory.OBESE;
 		}
 		return categoria;
 	}

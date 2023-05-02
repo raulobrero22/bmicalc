@@ -23,5 +23,5 @@ public interface CardioVascularMetrics  {
 	 * @param bmi Body Mass Index (BMI) value.
 	 * @return	  String representing the BMI category.
 	 */
-	public String category(double bmi);
+	public ObesityCategory category(double bmi);
 }
