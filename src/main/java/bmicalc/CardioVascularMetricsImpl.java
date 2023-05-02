@@ -1,17 +1,16 @@
 package bmicalc;
 
-public class BMICalcImpl implements BMICalc {
+public class CardioVascularMetricsImpl implements CardioVascularMetrics {
+	private double bmi;
 
-	double bmi;
-	String categoria;
 	
-private static BMICalcImpl instancia;
+private static CardioVascularMetricsImpl instancia;
 	
-	private BMICalcImpl() {
+	private CardioVascularMetricsImpl() {
 	}
-	public static BMICalcImpl getInstance() {
+	public static CardioVascularMetricsImpl getInstance() {
 		if(instancia==null) {
-			instancia=new BMICalcImpl();
+			instancia=new CardioVascularMetricsImpl();
 		}
 		return instancia;
 	}
@@ -27,6 +26,7 @@ private static BMICalcImpl instancia;
 	}
 
 	public String category(double bmi) {
+		String categoria;
 		if(bmi<0) {
 			throw new RuntimeException("El bmi no puede ser negativo");
 		}
@@ -42,20 +42,6 @@ private static BMICalcImpl instancia;
 		return categoria;
 	}
 
-	public boolean abdominalObesity(double waistCircumference, char gender) {
-		if(waistCircumference<0) {
-			throw new RuntimeException("El waistCircumference no puede ser negativo");
-		}
-		if(gender!='M' && gender!='F') {
-			throw new RuntimeException("Género no reconocido");
-		}
-		boolean t=false;
-		if(gender=='M' && waistCircumference>0.9) {
-			t=true;
-		}else if(gender=='F' && waistCircumference>0.8) {
-			t=true;
-		}
-		return t;
-	}
+
 
 }

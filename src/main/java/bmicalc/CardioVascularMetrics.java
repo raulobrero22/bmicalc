@@ -1,7 +1,7 @@
 package bmicalc;
 
 
-public interface CardioVascularMetrics extends MetabolicMetrics  {
+public interface CardioVascularMetrics  {
 	
 	/**
 	 * Calculate the Body Mass Index (BMI) of a person.
