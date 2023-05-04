@@ -11,9 +11,7 @@ public class MetabolicMetricImpl implements MetabolicMetric{
 			throw new RuntimeException("Género no reconocido");
 		}
 		boolean t=false;
-		if(gender==Gender.MALE && waistCircumference>0.9) {
-			t=true;
-		}else if(gender==Gender.FEMALE && waistCircumference>0.8) {
+		if(gender==Gender.MALE && waistCircumference>0.9 || gender==Gender.FEMALE && waistCircumference>0.8) {
 			t=true;
 		}
 		
